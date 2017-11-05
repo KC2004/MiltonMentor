@@ -1,24 +1,72 @@
 {% load staticfiles %}
 <html>
     <head>
-        <title>MiltonMento</title>
+        <title>MiltonMentor</title>
+
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="narrow-jumbotron.css" rel="stylesheet">
     </head>
     <body>
-        <div class="page-header">
-            <a href="{% url 'create_user' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-        <h1><a href="/">Milton Mentor</a></h1>
-    </div>
-    <div class="content container">
-        <div class="row">
-            <div class="col-md-8">
+    <div class="container">
+      <header class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills float-right">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">More Information</h3>
+      </header>
+
+
+
+
+      <main role="main">
+
+        <div class="jumbotron">
+          <h1 class="display-3">Jumbotron heading</h1>
+          <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+        </div>
+
+        <div class="row marketing">
             {% block content %}
             {% endblock %}
-            </div>
-        </div>
-    </div>
+
+                        <a href="{% url 'create_user' %}" class="top-menu"><button>submit</button></a>
+        <h1><a href="/">not sure if this is the submit button</a></h1>
+
+        </div> <!--row-->
+
+      </main> <!-- main-->
+
+
+      <footer class="footer">
+        <p>&copy; Milton Mentor 2017</p>
+      </footer>
+
+    </div> <!-- /container -->
     </body>
 </html>
