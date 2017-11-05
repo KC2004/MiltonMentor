@@ -1,7 +1,7 @@
 {% load staticfiles %}
 <html>
     <head>
-        <title>MiltonMentor</title>
+        <title>Milton Mentor</title>
 
         <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -40,25 +40,19 @@
         <h3 class="text-muted">More Information</h3>
       </header>
 
-
-
-
       <main role="main">
 
         <div class="jumbotron">
-          <h1 class="display-3">Jumbotron heading</h1>
+          <h1 class="display-3">Milton Mentor</h1>
           <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
-        </div>
 
-        <div class="row marketing">
-            {% block content %}
-            {% endblock %}
+          {% block content %}
+          {% endblock %}
 
-                        <a href="{% url 'create_user' %}" class="top-menu"><button>submit</button></a>
-        <h1><a href="/">not sure if this is the submit button</a></h1>
-
-        </div> <!--row-->
+          <a href="{% url 'create_user' %}" class="top-menu">
+            <button>submit</button>
+          </a>
+        </div><!--jumbotron-->
 
       </main> <!-- main-->
 
