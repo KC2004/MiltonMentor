@@ -1,0 +1,13 @@
+{% extends 'MentorApp/base.html' %}
+
+{% block content %}
+    <div class="createuser">
+   		<h1>New User</h1>
+   		<form method="POST" class="create-user-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    	</form>
+
+     </div>
+{% endblock %}
+</html>
